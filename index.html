@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- load class obj -->
+    <script src="TestAdt/ExClass.js"> </script>
+    <script src="Testdir/TestArrays.js" ></script>
+    <script>
+        console.log('\n\nTESTING OOP : \n');
+        obj={
+            name: {
+                    first:'Gandalf', 
+                    last:'the Grey'
+                },
+                address:'Middle Earth'
+            };
+        
+        var arr=[new Person('ok1', 10),new Person('not ok1', 11)];
+        // var p0= new Person('ok1', 10);
+        // var p1= new Person('not ok1', 12);
+        // arr.push(p0);
+        // arr.push(p1);
+        
+        for(var i=0; i<arr.length; i++){
+            arr[i].display();
+        }
+        console.log('\n\class : \n');
+        var book=new Book('title1', 'page1', 'isbn1');
+        book.printTitle();
+        book.printIsbn();
+    </script>
+    
+    <!-- sorting  -->
+    <script src="TestAdt/ArrSort.js"></script>
+    <script src="TestAdt/ObjSort.js"></script>
+
+    <!-- Stack -->
+    <script src="TestAdt/Stack.js"></script>
+    <script>
+        console.clear();
+        var stack=new Stack();
+        console.log(stack.isEmpty());
+        stack.push(5);
+        stack.push(8);
+        console.log(stack.peek());
+        stack.push(11);
+        stack.push(15);
+        stack.print();
+        stack.pop();
+        stack.pop();
+        console.log(stack.size());
+        stack.print();
+
+        // callback function //
+        function add(a,b,callback){
+            console.log(`function to add ${a}+${b}= ${a+b}`+"\n");
+            callback();
+        }
+
+        function disp(){
+            console.log("addition was completed");
+        }
+        add(1,2,disp);
+        // end callback function //
+    </script>
+
+
+    <script src="Testdir/TestStack.js"></script>
+
+    <!-- Queue -->
+    <script src="TestAdt/Queue.js"></script>
+    <script src="Testdir/TestQueue.js"></script>
+
+    <!-- Linked List -->
+    <script src="TestAdt/LinkedList.js"></script>
+    <script src="Testdir/TestLinkedList.js"></script>
+
+    <!-- Doubly Linked List -->
+    <script src="TestAdt/DoublyLinkedList.js"></script>
+    <script src="Testdir/TestDoublyLinkedList.js"></script>
+
+    <!-- Set  -->
+    <script src="TestAdt/Set.js"></script>
+    <script src="Testdir/TestSet.js"></script>
+
+      <!-- Dictionary  -->
+      <script src="TestAdt/Dictionary.js"></script>
+      <script src="Testdir/TestDictionary.js"></script>
+
+      <!-- Graph  -->
+      <script src="TestAdt/Graph.js"></script>
+      <script src="Testdir/TestGraph.js"></script>
+
+</body>
+</html>
+
